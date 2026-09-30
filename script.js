@@ -1,139 +1,133 @@
-```javascript
 "use strict";
 
+/* ================= ELEMENTS ================= */
 
-// ===============================
-// ELEMENTS
-// ===============================
-
-const menuBtn = document.querySelector(".menu-btn");
-const navLinks = document.querySelector(".nav-links");
-const header = document.querySelector("#header");
+const menu = document.querySelector(".menu-btn");
+const nav = document.querySelector(".nav-links");
 const form = document.querySelector("#registrationForm");
+const header = document.querySelector("#header");
 
+/* ================= MOBILE MENU ================= */
 
-// ===============================
-// MOBILE MENU
-// ===============================
+if (menu && nav) {
 
-if (menuBtn && navLinks) {
+```
+menu.addEventListener("click", () => {
 
-    menuBtn.addEventListener("click", () => {
+    nav.classList.toggle("show");
 
-        navLinks.classList.toggle("show");
+    const isOpen = nav.classList.contains("show");
 
-        const opened = navLinks.classList.contains("show");
+    menu.setAttribute(
+        "aria-label",
+        isOpen ? "Close menu" : "Open menu"
+    );
 
-        menuBtn.textContent = opened ? "✕" : "☰";
+    menu.textContent = isOpen ? "✕" : "☰";
 
-    });
+});
 
-}
-
-
-// ===============================
-// CLOSE MENU AFTER CLICK
-// ===============================
 
 document.querySelectorAll(".nav-links a").forEach(link => {
 
     link.addEventListener("click", () => {
 
-        navLinks.classList.remove("show");
+        nav.classList.remove("show");
 
-        menuBtn.textContent = "☰";
+        menu.textContent = "☰";
 
-    });
-
-});
-
-
-// ===============================
-// HEADER SCROLL EFFECT
-// ===============================
-
-window.addEventListener("scroll", () => {
-
-    if (window.scrollY > 30) {
-
-        header.classList.add("scrolled");
-
-    } else {
-
-        header.classList.remove("scrolled");
-
-    }
-
-});
-
-
-// ===============================
-// EVENT BUTTON
-// ===============================
-
-document.querySelectorAll(".card-btn").forEach(button => {
-
-    button.addEventListener("click", () => {
-
-        const selectedEvent =
-            button.getAttribute("data-event");
-
-        const eventSelect =
-            document.querySelector(
-                'select[name="event"]'
-            );
-
-        if (eventSelect && selectedEvent) {
-
-            eventSelect.value = selectedEvent;
-
-        }
-
-    });
-
-});
-
-
-// ===============================
-// REGISTRATION FORM
-// ===============================
-
-if (form) {
-
-    form.addEventListener("submit", event => {
-
-        event.preventDefault();
-
-        const formData =
-            new FormData(form);
-
-        const name =
-            formData.get("name");
-
-        const selectedEvent =
-            formData.get("event");
-
-        alert(
-            "🎉 Registration Successful!\n\n" +
-            "Welcome " + name + "!\n\n" +
-            "Event: " + selectedEvent
+        menu.setAttribute(
+            "aria-label",
+            "Open menu"
         );
 
-        form.reset();
-
     });
+
+});
+```
 
 }
 
+/* ================= EVENT SELECTION ================= */
 
-// ===============================
-// SMOOTH REVEAL ANIMATION
-// ===============================
+document.querySelectorAll(".card-btn").forEach(button => {
 
-const cards = document.querySelectorAll(
-    ".event-card, .club-card, .contact-card, .about-box"
+```
+button.addEventListener("click", () => {
+
+    const card = button.closest(".event-card");
+
+    if (!card) return;
+
+    const titleElement = card.querySelector("h3");
+
+    const select = document.querySelector(
+        'select[name="event"]'
+    );
+
+    if (!titleElement || !select) return;
+
+    const title = titleElement.textContent.trim();
+
+    [...select.options].forEach(option => {
+
+        option.selected =
+            option.textContent.trim() === title;
+
+    });
+
+});
+```
+
+});
+
+/* ================= REGISTRATION ================= */
+
+if (form) {
+
+```
+form.addEventListener("submit", event => {
+
+    event.preventDefault();
+
+    const data = new FormData(form);
+
+    const name = data.get("name");
+
+    alert(
+        `🎉 Registration successful!\n\nWelcome ${name}!`
+    );
+
+    form.reset();
+
+});
+```
+
+}
+
+/* ================= HEADER SCROLL ================= */
+
+window.addEventListener("scroll", () => {
+
+```
+if (!header) return;
+
+header.classList.toggle(
+    "scrolled",
+    window.scrollY > 30
 );
+```
 
+});
+
+/* ================= SCROLL REVEAL ================= */
+
+const revealElements =
+document.querySelectorAll(".reveal");
+
+if ("IntersectionObserver" in window) {
+
+```
 const observer = new IntersectionObserver(
     entries => {
 
@@ -141,7 +135,7 @@ const observer = new IntersectionObserver(
 
             if (entry.isIntersecting) {
 
-                entry.target.classList.add("visible");
+                entry.target.classList.add("active");
 
                 observer.unobserve(entry.target);
 
@@ -156,30 +150,21 @@ const observer = new IntersectionObserver(
 );
 
 
-cards.forEach(card => {
+revealElements.forEach(element => {
 
-    card.style.opacity = "0";
-    card.style.transform = "translateY(25px)";
-    card.style.transition =
-        "opacity .7s ease, transform .7s ease";
-
-    observer.observe(card);
+    observer.observe(element);
 
 });
-
-
-// Add visible style dynamically
-const revealStyle = document.createElement("style");
-
-revealStyle.textContent = `
-    .event-card.visible,
-    .club-card.visible,
-    .contact-card.visible,
-    .about-box.visible {
-        opacity: 1 !important;
-        transform: translateY(0) !important;
-    }
-`;
-
-document.head.appendChild(revealStyle);
 ```
+
+} else {
+
+```
+revealElements.forEach(element => {
+
+    element.classList.add("active");
+
+});
+```
+
+}
