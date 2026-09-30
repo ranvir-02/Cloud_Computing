@@ -1,207 +1,265 @@
+```html
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-```
-<meta name="description" content="CampusConnect - College Event Management System">
-<meta name="author" content="Ranvirsing Pankaj Patil">
+    <meta name="description" content="CampusConnect - R. C. Patel College Event Management System">
 
-<title>CampusConnect | R. C. Patel College</title>
+    <title>CampusConnect | Pankaj Patil</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
-```
-
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-```
-<!-- LOADING SCREEN -->
-
-<div class="page-loader">
-    <div class="loader-logo">✦ CampusConnect</div>
-    <div class="loader-line"></div>
-    <p>Loading Campus Experience...</p>
+<!-- Animated background -->
+<div class="bg">
+    <span></span>
+    <span></span>
+    <span></span>
 </div>
 
-
-<!-- CURSOR GLOW -->
-
-<div class="cursor-glow"></div>
-
-
-<!-- HEADER -->
-
-<header id="header">
-
+<header>
     <nav class="navbar">
 
         <a href="#home" class="logo">
             <span>✦</span> CampusConnect
         </a>
 
-        <button class="menu-btn" aria-label="Open menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+        <button class="menu-btn" aria-label="Menu">☰</button>
 
         <ul class="nav-links">
-
-            <li>
-                <a href="#home">Home</a>
-            </li>
-
-            <li>
-                <a href="#events">Events</a>
-            </li>
-
-            <li>
-                <a href="#about">About</a>
-            </li>
-
-            <li>
-                <a href="#clubs">Clubs</a>
-            </li>
-
-            <li>
-                <a href="#register">Register</a>
-            </li>
-
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-
+            <li><a href="#home">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#clubs">Clubs</a></li>
+            <li><a href="#register">Register</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
 
     </nav>
-
 </header>
 
 
 <main>
 
+<!-- ================= HERO ================= -->
 
-    <!-- =========================================
-         HERO
-    ========================================== -->
+<section id="home" class="hero">
 
-    <section id="home" class="hero">
+    <div class="hero-content">
 
-        <div class="hero-grid"></div>
+        <div class="college-badge">
+            🎓 R. C. Patel College
+        </div>
 
-        <div class="floating-orb orb-one"></div>
-        <div class="floating-orb orb-two"></div>
-        <div class="floating-orb orb-three"></div>
+        <!-- YOUR NAME -->
+        <h1 class="student-name">
+            Pankaj Patil
+        </h1>
 
-        <div class="hero-content reveal">
+        <div class="student-info">
+            <span>💻 Diploma in Computer Engineering</span>
+            <b>TYCOB</b>
+        </div>
 
+        <h2>
+            Where Campus Life
+            <span>Comes Alive ✨</span>
+        </h2>
 
-            <!-- COLLEGE BADGE -->
+        <p class="college-name">
+            R. C. Patel College of Engineering and Polytechnic, Shirpur
+        </p>
 
-            <div class="college-badge">
+        <p class="hero-text">
+            Discover exciting events, join amazing clubs, showcase
+            your talent and create unforgettable campus memories.
+        </p>
 
-                <span class="badge-dot"></span>
+        <div class="hero-buttons">
+            <a href="#events" class="btn primary">
+                🚀 Explore Events
+            </a>
 
-                🎓 R. C. Patel College
+            <a href="#register" class="btn secondary">
+                🎟 Register Now
+            </a>
+        </div>
 
+        <div class="hero-stats">
+            <div>
+                <strong>04+</strong>
+                <span>Events</span>
             </div>
 
-
-            <!-- STUDENT IDENTITY -->
-
-            <div class="student-identity">
-
-                <div class="student-name">
-                    Ranvirsing Pankaj Patil
-                </div>
-
-                <div class="student-details">
-
-                    <span>
-                        Diploma in Computer Engineering
-                    </span>
-
-                    <span class="detail-divider">
-                        •
-                    </span>
-
-                    <span>
-                        TYCOB
-                    </span>
-
-                </div>
-
+            <div>
+                <strong>04</strong>
+                <span>Clubs</span>
             </div>
 
+            <div>
+                <strong>100+</strong>
+                <span>Students</span>
+            </div>
+        </div>
 
-            <!-- HERO SMALL TITLE -->
+    </div>
 
-            <p class="hero-small">
-                WELCOME TO THE FUTURE OF CAMPUS LIFE
+    <div class="scroll">
+        <span>↓</span> Scroll to explore
+    </div>
+
+</section>
+
+
+<!-- ================= EVENTS ================= -->
+
+<section id="events" class="section">
+
+    <div class="heading">
+        <span>🔥 What's Happening</span>
+        <h2>Upcoming Events</h2>
+        <p>Experience technology, culture, sports and innovation.</p>
+    </div>
+
+    <div class="event-grid">
+
+        <article class="event-card">
+
+            <div class="event-icon tech">⚡</div>
+
+            <small>TECHNICAL</small>
+
+            <h3>TechFest 2026</h3>
+
+            <p>
+                💻 Coding • Robotics • Quizzes • Projects
             </p>
 
-
-            <!-- HERO TITLE -->
-
-            <h1>
-
-                Where Campus Life
-
-                <span>
-                    Comes Alive ✨
-                </span>
-
-            </h1>
-
-
-            <!-- COLLEGE NAME -->
-
-            <p class="college-name">
-                R. C. Patel College of Engineering and Polytechnic, Shirpur
-            </p>
-
-
-            <!-- DESCRIPTION -->
-
-            <p class="hero-text">
-
-                Discover exciting events, join amazing clubs,
-                showcase your talent and create unforgettable
-                campus memories.
-
-            </p>
-
-
-            <!-- BUTTONS -->
-
-            <div class="hero-buttons">
-
-                <a href="#events" class="btn primary">
-                    <span>🚀</span>
-                    Explore Events
-                </a>
-
-                <a href="#register" class="btn secondary">
-                    <span>🎟️</span>
-                    Register Now
-                </a>
-
+            <div class="event-info">
+                <span>📅 15 Oct 2026</span>
+                <span>📍 Main Auditorium</span>
             </div>
 
+            <a href="#register" class="card-btn">
+                Join Event →
+            </a>
 
-            <!-- HERO MINI INFO -->
+        </article>
 
-            <div class="hero-mini-info">
+
+        <article class="event-card">
+
+            <div class="event-icon cultural">🎪</div>
+
+            <small>CULTURAL</small>
+
+            <h3>Cultural Fest</h3>
+
+            <p>
+                🎵 Music • Dance • Drama • Talent
+            </p>
+
+            <div class="event-info">
+                <span>📅 22 Oct 2026</span>
+                <span>📍 College Ground</span>
+            </div>
+
+            <a href="#register" class="card-btn">
+                Join Event →
+            </a>
+
+        </article>
+
+
+        <article class="event-card">
+
+            <div class="event-icon sports">🏆</div>
+
+            <small>SPORTS</small>
+
+            <h3>Sports Day</h3>
+
+            <p>
+                🏏 Cricket • Football • Volleyball
+            </p>
+
+            <div class="event-info">
+                <span>📅 05 Nov 2026</span>
+                <span>📍 Sports Ground</span>
+            </div>
+
+            <a href="#register" class="card-btn">
+                Join Event →
+            </a>
+
+        </article>
+
+
+        <article class="event-card">
+
+            <div class="event-icon innovation">🚀</div>
+
+            <small>INNOVATION</small>
+
+            <h3>Innovation Expo</h3>
+
+            <p>
+                💡 Ideas • Startups • Projects
+            </p>
+
+            <div class="event-info">
+                <span>📅 18 Nov 2026</span>
+                <span>📍 Seminar Hall</span>
+            </div>
+
+            <a href="#register" class="card-btn">
+                Join Event →
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="section about">
+
+    <div class="heading">
+        <span>🌟 About Us</span>
+        <h2>CampusConnect</h2>
+        <p>One campus. Endless experiences.</p>
+    </div>
+
+    <div class="about-box">
+
+        <div class="about-icon">🎓</div>
+
+        <div>
+
+            <h3>
+                One Campus. Endless Experiences.
+            </h3>
+
+            <p>
+                CampusConnect is a student-focused platform created
+                for R. C. Patel College of Engineering and Polytechnic,
+                Shirpur. Discover events, connect with communities and
+                participate in activities that make college life memorable.
+            </p>
+
+            <div class="stats">
 
                 <div>
                     <strong>04+</strong>
@@ -222,669 +280,182 @@
 
         </div>
 
+    </div>
 
-        <!-- SCROLL -->
+</section>
 
-        <div class="scroll-down">
 
-            <span></span>
+<!-- ================= CLUBS ================= -->
 
-            Scroll to explore
+<section id="clubs" class="section">
 
+    <div class="heading">
+        <span>🚀 Find Your Community</span>
+        <h2>Student Clubs</h2>
+        <p>Learn, create, compete and grow together.</p>
+    </div>
+
+    <div class="club-grid">
+
+        <div class="club-card">
+            <span>🧠</span>
+            <h3>Tech Club</h3>
+            <p>Coding, AI, robotics and technology.</p>
         </div>
 
-    </section>
-
-
-
-    <!-- =========================================
-         EVENTS
-    ========================================== -->
-
-    <section id="events" class="section">
-
-
-        <div class="heading reveal">
-
-            <span class="section-kicker">
-                🔥 WHAT'S HAPPENING
-            </span>
-
-            <h2>
-                Upcoming
-                <span>Events</span>
-            </h2>
-
-            <p>
-                Experience technology, culture, sports and innovation.
-            </p>
-
+        <div class="club-card">
+            <span>🎨</span>
+            <h3>Cultural Club</h3>
+            <p>Music, dance, drama and creativity.</p>
         </div>
 
-
-        <div class="event-grid">
-
-
-            <!-- EVENT 1 -->
-
-            <article class="event-card reveal">
-
-                <div class="card-glow"></div>
-
-                <div class="event-icon tech">
-                    ⚡
-                </div>
-
-                <span class="event-tag">
-                    TECHNICAL
-                </span>
-
-                <h3>
-                    TechFest 2026
-                </h3>
-
-                <p>
-                    💻 Coding • Robotics • Quizzes • Projects
-                </p>
-
-                <div class="event-info">
-
-                    <span>
-                        📅 15 Oct 2026
-                    </span>
-
-                    <span>
-                        📍 Main Auditorium
-                    </span>
-
-                </div>
-
-                <a href="#register" class="card-btn">
-                    Join Event
-                    <span>→</span>
-                </a>
-
-            </article>
-
-
-
-            <!-- EVENT 2 -->
-
-            <article class="event-card reveal">
-
-                <div class="card-glow pink-glow"></div>
-
-                <div class="event-icon cultural">
-                    🎪
-                </div>
-
-                <span class="event-tag pink">
-                    CULTURAL
-                </span>
-
-                <h3>
-                    Cultural Fest
-                </h3>
-
-                <p>
-                    🎵 Music • Dance • Drama • Talent
-                </p>
-
-                <div class="event-info">
-
-                    <span>
-                        📅 22 Oct 2026
-                    </span>
-
-                    <span>
-                        📍 College Ground
-                    </span>
-
-                </div>
-
-                <a href="#register" class="card-btn">
-                    Join Event
-                    <span>→</span>
-                </a>
-
-            </article>
-
-
-
-            <!-- EVENT 3 -->
-
-            <article class="event-card reveal">
-
-                <div class="card-glow yellow-glow"></div>
-
-                <div class="event-icon sports">
-                    🏅
-                </div>
-
-                <span class="event-tag yellow">
-                    SPORTS
-                </span>
-
-                <h3>
-                    Sports Day
-                </h3>
-
-                <p>
-                    🏏 Cricket • Football • Volleyball • Athletics
-                </p>
-
-                <div class="event-info">
-
-                    <span>
-                        📅 05 Nov 2026
-                    </span>
-
-                    <span>
-                        📍 Sports Ground
-                    </span>
-
-                </div>
-
-                <a href="#register" class="card-btn">
-                    Join Event
-                    <span>→</span>
-                </a>
-
-            </article>
-
-
-
-            <!-- EVENT 4 -->
-
-            <article class="event-card reveal">
-
-                <div class="card-glow purple-glow"></div>
-
-                <div class="event-icon innovation">
-                    🚀
-                </div>
-
-                <span class="event-tag purple">
-                    INNOVATION
-                </span>
-
-                <h3>
-                    Innovation Expo
-                </h3>
-
-                <p>
-                    💡 Ideas • Startups • Projects • Innovation
-                </p>
-
-                <div class="event-info">
-
-                    <span>
-                        📅 18 Nov 2026
-                    </span>
-
-                    <span>
-                        📍 Seminar Hall
-                    </span>
-
-                </div>
-
-                <a href="#register" class="card-btn">
-                    Join Event
-                    <span>→</span>
-                </a>
-
-            </article>
-
+        <div class="club-card">
+            <span>🏆</span>
+            <h3>Sports Club</h3>
+            <p>Cricket, football and athletics.</p>
         </div>
 
-    </section>
-
-
-
-    <!-- =========================================
-         ABOUT
-    ========================================== -->
-
-    <section id="about" class="section about">
-
-
-        <div class="heading reveal">
-
-            <span class="section-kicker">
-                🌟 ABOUT US
-            </span>
-
-            <h2>
-                Campus<span>Connect</span>
-            </h2>
-
-            <p>
-                One platform for your complete campus experience.
-            </p>
-
+        <div class="club-card">
+            <span>💡</span>
+            <h3>Innovation Club</h3>
+            <p>Ideas, startups and project building.</p>
         </div>
 
+    </div>
 
-        <div class="about-box reveal">
+</section>
 
-            <div class="about-icon">
-                🎓
-            </div>
 
+<!-- ================= REGISTER ================= -->
+
+<section id="register" class="section register">
+
+    <div class="heading">
+        <span>🎟 Don't Miss Out</span>
+        <h2>Event Registration</h2>
+        <p>Reserve your spot and be part of the experience.</p>
+    </div>
+
+    <form id="registrationForm">
+
+        <div class="input-grid">
 
             <div>
-
-                <h3>
-                    One Campus. Endless Experiences.
-                </h3>
-
-                <p>
-
-                    CampusConnect is a student-focused platform created
-                    for R. C. Patel College of Engineering and Polytechnic,
-                    Shirpur. Discover events, connect with communities
-                    and participate in activities that make college life
-                    memorable.
-
-                </p>
-
-
-                <div class="stats">
-
-                    <div>
-                        <strong>04+</strong>
-                        <span>Events</span>
-                    </div>
-
-                    <div>
-                        <strong>04</strong>
-                        <span>Clubs</span>
-                    </div>
-
-                    <div>
-                        <strong>100+</strong>
-                        <span>Students</span>
-                    </div>
-
-                </div>
-
+                <label>Student Name</label>
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                >
             </div>
 
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================================
-         CLUBS
-    ========================================== -->
-
-    <section id="clubs" class="section">
-
-
-        <div class="heading reveal">
-
-            <span class="section-kicker">
-                🚀 FIND YOUR COMMUNITY
-            </span>
-
-            <h2>
-                Student
-                <span>Clubs</span>
-            </h2>
-
-            <p>
-                Learn, create, compete and grow together.
-            </p>
-
-        </div>
-
-
-        <div class="club-grid">
-
-
-            <div class="club-card reveal">
-
-                <span>🧠</span>
-
-                <h3>
-                    Tech Club
-                </h3>
-
-                <p>
-                    Coding, AI, robotics and technology.
-                </p>
-
+            <div>
+                <label>Email Address</label>
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="student@example.com"
+                    required
+                >
             </div>
 
-
-            <div class="club-card reveal">
-
-                <span>🎨</span>
-
-                <h3>
-                    Cultural Club
-                </h3>
-
-                <p>
-                    Music, dance, drama and creativity.
-                </p>
-
+            <div>
+                <label>Phone Number</label>
+                <input
+                    type="tel"
+                    name="phone"
+                    placeholder="+91 98765 43210"
+                    required
+                >
             </div>
 
-
-            <div class="club-card reveal">
-
-                <span>🏆</span>
-
-                <h3>
-                    Sports Club
-                </h3>
-
-                <p>
-                    Cricket, football and athletics.
-                </p>
-
-            </div>
-
-
-            <div class="club-card reveal">
-
-                <span>💡</span>
-
-                <h3>
-                    Innovation Club
-                </h3>
-
-                <p>
-                    Ideas, startups and project building.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================================
-         REGISTER
-    ========================================== -->
-
-    <section id="register" class="section register">
-
-
-        <div class="heading reveal">
-
-            <span class="section-kicker">
-                🎟️ DON'T MISS OUT
-            </span>
-
-            <h2>
-                Event
-                <span>Registration</span>
-            </h2>
-
-            <p>
-                Reserve your spot and be part of the experience.
-            </p>
-
-        </div>
-
-
-        <form id="registrationForm" class="reveal">
-
-
-            <div class="input-grid">
-
-
-                <div class="input-group">
-
-                    <label>
-                        Student Name
-                    </label>
-
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Enter your name"
-                        required
-                    >
-
-                </div>
-
-
-                <div class="input-group">
-
-                    <label>
-                        Email Address
-                    </label>
-
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="student@example.com"
-                        required
-                    >
-
-                </div>
-
-
-                <div class="input-group">
-
-                    <label>
-                        Phone Number
-                    </label>
-
-                    <input
-                        type="tel"
-                        name="phone"
-                        placeholder="+91 98765 43210"
-                        required
-                    >
-
-                </div>
-
-
-                <div class="input-group">
-
-                    <label>
-                        Branch
-                    </label>
-
-                    <select name="branch" required>
-
-                        <option value="">
-                            Select branch
-                        </option>
-
-                        <option>
-                            Computer Engineering
-                        </option>
-
-                        <option>
-                            Information Technology
-                        </option>
-
-                        <option>
-                            Mechanical Engineering
-                        </option>
-
-                        <option>
-                            Civil Engineering
-                        </option>
-
-                        <option>
-                            Electrical Engineering
-                        </option>
-
-                        <option>
-                            Electronics Engineering
-                        </option>
-
-                    </select>
-
-                </div>
-
-            </div>
-
-
-            <div class="input-group">
-
-                <label>
-                    Select Event
-                </label>
-
-                <select name="event" required>
-
-                    <option value="">
-                        Choose an event
-                    </option>
-
-                    <option>
-                        TechFest 2026
-                    </option>
-
-                    <option>
-                        Cultural Fest
-                    </option>
-
-                    <option>
-                        Sports Day
-                    </option>
-
-                    <option>
-                        Innovation Expo
-                    </option>
-
+            <div>
+                <label>Branch</label>
+
+                <select name="branch" required>
+                    <option value="">Select branch</option>
+                    <option>Diploma in Computer Engineering</option>
+                    <option>Information Technology</option>
+                    <option>Mechanical Engineering</option>
+                    <option>Civil Engineering</option>
+                    <option>Electrical Engineering</option>
+                    <option>Electronics Engineering</option>
                 </select>
 
             </div>
 
-
-            <div class="input-group">
-
-                <label>
-                    Message
-                </label>
-
-                <textarea
-                    name="message"
-                    placeholder="Any message for the organizers?"
-                ></textarea>
-
-            </div>
-
-
-            <button type="submit">
-                ✨ Submit Registration
-            </button>
-
-
-            <div id="successMessage" class="success-message">
-                🎉 Registration successful!
-            </div>
-
-        </form>
-
-    </section>
-
-
-
-    <!-- =========================================
-         CONTACT
-    ========================================== -->
-
-    <section id="contact" class="section contact">
-
-
-        <div class="heading reveal">
-
-            <span class="section-kicker">
-                📬 GET IN TOUCH
-            </span>
-
-            <h2>
-                Contact
-                <span>Us</span>
-            </h2>
-
         </div>
 
+        <label>Select Event</label>
 
-        <div class="contact-grid">
+        <select name="event" required>
+            <option value="">Choose an event</option>
+            <option>TechFest 2026</option>
+            <option>Cultural Fest</option>
+            <option>Sports Day</option>
+            <option>Innovation Expo</option>
+        </select>
 
+        <label>Message</label>
 
-            <div class="contact-card reveal">
+        <textarea
+            name="message"
+            placeholder="Any message for the organizers?"
+        ></textarea>
 
-                <span>📍</span>
+        <button type="submit">
+            ✨ Submit Registration
+        </button>
 
-                <h3>
-                    Campus
-                </h3>
+    </form>
 
-                <p>
-                    Shirpur, Maharashtra, India
-                </p>
-
-            </div>
-
-
-            <div class="contact-card reveal">
-
-                <span>📧</span>
-
-                <h3>
-                    Email
-                </h3>
-
-                <p>
-                    campusconnect@rcpatelcollege.edu.in
-                </p>
-
-            </div>
+</section>
 
 
-            <div class="contact-card reveal">
+<!-- ================= CONTACT ================= -->
 
-                <span>📞</span>
+<section id="contact" class="section">
 
-                <h3>
-                    Phone
-                </h3>
+    <div class="heading">
+        <span>📬 Get In Touch</span>
+        <h2>Contact Us</h2>
+    </div>
 
-                <p>
-                    +91 98765 43210
-                </p>
+    <div class="contact-grid">
 
-            </div>
-
-
-            <div class="contact-card reveal">
-
-                <span>🕘</span>
-
-                <h3>
-                    Office Hours
-                </h3>
-
-                <p>
-                    Mon – Fri | 9:00 AM – 5:00 PM
-                </p>
-
-            </div>
-
+        <div class="contact-card">
+            <span>📍</span>
+            <h3>Campus</h3>
+            <p>Shirpur, Maharashtra, India</p>
         </div>
 
-    </section>
+        <div class="contact-card">
+            <span>📧</span>
+            <h3>Email</h3>
+            <p>campusconnect@rcpatelcollege.edu.in</p>
+        </div>
+
+        <div class="contact-card">
+            <span>📞</span>
+            <h3>Phone</h3>
+            <p>+91 98765 43210</p>
+        </div>
+
+        <div class="contact-card">
+            <span>🕘</span>
+            <h3>Office Hours</h3>
+            <p>Mon – Fri | 9:00 AM – 5:00 PM</p>
+        </div>
+
+    </div>
+
+</section>
 
 </main>
 
 
-
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -893,20 +464,9 @@
     </div>
 
     <p>
-        R. C. Patel College of Engineering and Polytechnic, Shirpur
+        Designed & Developed by
+        <strong>Pankaj Patil</strong>
     </p>
-
-    <div class="footer-creator">
-
-        Crafted with
-        <span>✨</span>
-        by
-
-        <strong>
-            Ranvirsing Pankaj Patil
-        </strong>
-
-    </div>
 
     <small>
         © 2026 CampusConnect • College Event Management System
@@ -915,9 +475,8 @@
 </footer>
 
 
-<script src="script.js"></script>
-```
+<script src="js/script.js"></script>
 
 </body>
-
 </html>
+```
